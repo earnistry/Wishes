@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>मेरी शुभकामना वेबसाइट</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        body { 
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white; min-height: 100vh; padding: 20px; text-align: center; 
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        h1 { font-size: 2.8rem; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .message-box {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 8px 32px rgba(31,38,135,0.37);
+            border: 1px solid rgba(255,255,255,0.18);
+        }
+        p { font-size: 1.4rem; line-height: 1.8; margin-bottom: 20px; }
+        .signature { font-style: italic; font-size: 1.6rem; margin-top: 30px; color: #FFEB3B; }
+        .animate-char { animation: glow 2s ease-in-out infinite; display: inline-block; }
+        @keyframes glow {
+            0%,100% { transform: scale(1); }
+            50% { transform: scale(1.2); text-shadow: 0 0 20px yellow; }
+        }
+        .footer { margin-top: 40px; font-size: 0.9rem; opacity: 0.8; }
+        @media (max-width: 600px) {
+            h1 { font-size: 2.2rem; }
+            p { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <span class="animate-char">🎉</span> 
+            आपको हार्दिक शुभकामनाएँ!
+            <span class="animate-char">✨</span>
+        </h1>
+        
+        <div class="message-box">
+            <p>प्रिय मित्र,</p>
+            <p>जीवन में सदा खुशियाँ बनी रहें। सभी मनोकामनाएँ पूरी हों और हर चुनौती में सफलता मिले।</p>
+            <p>ईश्वर आपको सद्बुद्धि दे और आप स्वस्थ व प्रसन्न रहें!</p>
+            <p class="signature">— आपका अपना</p>
+        </div>
+        
+        <div class="footer">
+            <p>आपके विशेष दिन को यादगार बनाने के लिए बनाया गया</p>
+        </div>
+    </div>
+
+    <script>
+        // एनिमेशन के लिए स्क्रिप्ट
+        document.addEventListener('DOMContentLoaded', function() {
+            const chars = document.querySelectorAll('.animate-char');
+            chars.forEach(char => {
+                char.style.animationDelay = `${Math.random() * 0.5}s`;
+            });
+        });
+    </script>
+</body>
+</html>
